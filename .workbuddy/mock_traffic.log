@@ -1,0 +1,79 @@
+=== 15:02:39 POST /hpt/v1/CurrentTime
+H: Client-ID: 0001
+H: sn: 632101048645E58ECB24
+H: mac: 86:45:E5:8E:CB:24
+H: Content-Type: application/json; charset=utf-8
+H: Content-Length: 24
+H: Host: 127.0.0.1:18080
+H: Connection: Keep-Alive
+H: Accept-Encoding: gzip
+H: User-Agent: okhttp/3.14.9
+BODY: {"ICCID":"","ICCID2":""}
+=== 15:02:44 GET /hpt/v2/Accounts/FaceSyncTasks?clientNos=0001&size=200
+H: Client-ID: 0001
+H: sn: 632101048645E58ECB24
+H: mac: 86:45:E5:8E:CB:24
+H: Host: 127.0.0.1:18080
+H: Connection: Keep-Alive
+H: Accept-Encoding: gzip
+H: User-Agent: okhttp/3.14.9
+=== 15:02:44 GET /face_test.png
+H: Client-ID: 0001
+H: sn: 632101048645E58ECB24
+H: mac: 86:45:E5:8E:CB:24
+H: Host: 127.0.0.1:18080
+H: Connection: Keep-Alive
+H: Accept-Encoding: gzip
+H: User-Agent: okhttp/3.14.9
+=== 15:02:44 GET /face_test.png
+H: Client-ID: 0001
+H: sn: 632101048645E58ECB24
+H: mac: 86:45:E5:8E:CB:24
+H: Host: 127.0.0.1:18080
+H: Connection: Keep-Alive
+H: Accept-Encoding: gzip
+H: User-Agent: okhttp/3.14.9
+=== 15:02:45 POST /hpt/v2/Accounts/FaceSyncTasks
+H: Client-ID: 0001
+H: sn: 632101048645E58ECB24
+H: mac: 86:45:E5:8E:CB:24
+H: Content-Type: application/json; charset=utf-8
+H: Content-Length: 1157
+H: Host: 127.0.0.1:18080
+H: Connection: Keep-Alive
+H: Accept-Encoding: gzip
+H: User-Agent: okhttp/3.14.9
+BODY: {"clientID":"8","TaskIdentifier":"TESTTK-001","algoVersion":"KS V1.3.3.1","result":"true","models":[{"accountID":"u2","clientID":"8","result":"true","status":0,"message":"","updateTime":"2026-10-28 15:02:45","faceFeature":"PiG1yNGP13PohGeVcXQHy/JAE/CUofnKH6dZcak70DAgCpihPfZOVCkCj3DMPh7l/NKwgb9AU/bgZj8JqjJG0rCOqXYMPWKhpcufz7tgIiVsoJakdlqkyY5HnKk42TlpGNz/+lp1tW6q2bTV23+SVakI7KMMEOSS63JkHUnxO75wENxcIgoou6CDyCTMZPEZkte7VNT2AwZKxJPhnNIeQPlc8idMP1p5HpM1NwYUkeKkDeOBZbK6QWQI1i59Dwfp9zgM0knLdEEJNfEwmWrHNi+1GTqW6hBt+ADp+NOajc0cvPTluG5Dr9iSSz453krPOwSXfeKqEpdMma2LOUOnqA\u003d\u003d","featureMD5":"f775ea7e780090c9e7180a729c1c756b"},{"accountID":"u1","clientID":"8","result":"true","status":0,"message":"","updateTime":"2026-10-28 15:02:45","faceFeature":"PiG1yNGP13PohGeVcXQHy/JAE/CUofnKH6dZcak70DAgCpihPfZOVCkCj3DMPh7l/NKwgb9AU/bgZj8JqjJG0rCOqXYMPWKhpcufz7tgIiVsoJakdlqkyY5HnKk42TlpGNz/+lp1tW6q2bTV23+SVakI7KMMEOSS63JkHUnxO75wENxcIgoou6CDyCTMZPEZkte7VNT2AwZKxJPhnNIeQPlc8idMP1p5HpM1NwYUkeKkDeOBZbK6QWQI1i59Dwfp9zgM0knLdEEJNfEwmWrHNi+1GTqW6hBt+ADp+NOajc0cvPTluG5Dr9iSSz453krPOwSXfeKqEpdMma2LOUOnqA\u003d\u003d","featureMD5":"f775ea7e780090c9e7180a729c1c756b"}]}
+=== 15:02:54 POST /hpt/v1/CurrentTime
+H: Client-ID: 0001
+H: sn: 632101048645E58ECB24
+H: mac: 86:45:E5:8E:CB:24
+H: Content-Type: application/json; charset=utf-8
+H: Content-Length: 24
+H: Host: 127.0.0.1:18080
+H: Connection: Keep-Alive
+H: Accept-Encoding: gzip
+H: User-Agent: okhttp/3.14.9
+BODY: {"ICCID":"","ICCID2":""}
+=== 15:03:09 POST /hpt/v1/CurrentTime
+H: Client-ID: 0001
+H: sn: 632101048645E58ECB24
+H: mac: 86:45:E5:8E:CB:24
+H: Content-Type: application/json; charset=utf-8
+H: Content-Length: 24
+H: Host: 127.0.0.1:18080
+H: Connection: Keep-Alive
+H: Accept-Encoding: gzip
+H: User-Agent: okhttp/3.14.9
+BODY: {"ICCID":"","ICCID2":""}
+=== 15:03:24 POST /hpt/v1/CurrentTime
+H: Client-ID: 0001
+H: sn: 632101048645E58ECB24
+H: mac: 86:45:E5:8E:CB:24
+H: Content-Type: application/json; charset=utf-8
+H: Content-Length: 24
+H: Host: 127.0.0.1:18080
+H: Connection: Keep-Alive
+H: Accept-Encoding: gzip
+H: User-Agent: okhttp/3.14.9
+BODY: {"ICCID":"","ICCID2":""}

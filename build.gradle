@@ -1,0 +1,12 @@
+buildscript {
+    ext {
+        agp_version = '8.4.2'
+    }
+}
+plugins {
+    id 'com.android.application' version "$agp_version" apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

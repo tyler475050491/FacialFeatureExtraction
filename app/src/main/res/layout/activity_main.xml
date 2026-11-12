@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- ==================== 顶部标题栏（左侧时间 + 居中标题） ==================== -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1E88E5"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:text="2026-10-28 10:37:22"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="人脸特征提取系统"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <!-- ==================== 任务状态栏 ==================== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCurrentTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#F5F5F5"
+            android:padding="10dp"
+            android:text="当前任务状态：空闲"
+            android:textColor="#E65100"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvLastTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="#F5F5F5"
+            android:padding="10dp"
+            android:text="上次任务状态：暂无"
+            android:textColor="#00695C"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- ==================== 设备资源状态栏（CPU/内存/存储，动态刷新） ==================== -->
+    <TextView
+        android:id="@+id/tvDeviceStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#F5F5F5"
+        android:padding="10dp"
+        android:text="CPU: --%，内存: --，存储: --"
+        android:textColor="#1565C0"
+        android:textSize="14sp" />
+
+    <!-- ==================== 历史任务 ==================== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="#F5F5F5"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="历史同步任务"
+                android:textColor="#111111"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etStartTime"
+                android:layout_width="150dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_edit_box"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="开始时间"
+                android:padding="4dp"
+                android:singleLine="true"
+                android:textColor="#111111"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="结束"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etEndTime"
+                android:layout_width="150dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_edit_box"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="结束时间"
+                android:padding="4dp"
+                android:singleLine="true"
+                android:textColor="#111111"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etTaskId"
+                android:layout_width="110dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_edit_box"
+                android:gravity="center"
+                android:hint="任务编号"
+                android:padding="4dp"
+                android:singleLine="true"
+                android:textColor="#111111"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnQuery"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginStart="10dp"
+                android:background="#1E88E5"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="查询"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:background="#00897B"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="刷新"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:background="#E53935"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="清除记录"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- 表头 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="#E0E0E0"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:text="序号"
+                android:textColor="#555555"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:text="任务编号"
+                android:textColor="#555555"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:text="处理时间"
+                android:textColor="#555555"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="照片数量"
+                android:textColor="#555555"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="成功数量"
+                android:textColor="#555555"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="失败数量"
+                android:textColor="#555555"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:gravity="center"
+                android:text="整体耗时"
+                android:textColor="#555555"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#DDDDDD"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+
+    <!-- ==================== 底部状态栏（SN/机号/算法/APP/IP/通讯/网络/按钮） ==================== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#EFEFEF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvSn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:singleLine="true"
+            android:text="SN: -"
+            android:textColor="#1565C0"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvDeviceNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:text="机号: -"
+            android:textColor="#1565C0"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvAlgoVersion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:singleLine="true"
+            android:text="算法: -"
+            android:textColor="#1565C0"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvAppVersion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="版本: -"
+            android:textColor="#1565C0"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvIp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:singleLine="true"
+            android:text="IP: -"
+            android:textColor="#1565C0"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvMac"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:singleLine="true"
+            android:text="MAC: -"
+            android:textColor="#1565C0"
+            android:textSize="13sp" />
+
+        <!-- 通讯状态：绿色正常 / 红色异常 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通讯"
+                android:textColor="#1565C0"
+                android:textSize="13sp" />
+
+            <View
+                android:id="@+id/vOnlineDot"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/dot_red" />
+        </LinearLayout>
+
+        <!-- 网络图标：以太网/WiFi 切换，无网络时红 X -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="网络"
+                android:textColor="#1565C0"
+                android:textSize="13sp" />
+
+            <FrameLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="6dp">
+
+                <ImageView
+                    android:id="@+id/ivNetwork"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="network"
+                    android:src="@drawable/ic_ethernet" />
+
+                <ImageView
+                    android:id="@+id/ivNetX"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="offline"
+                    android:src="@drawable/ic_x"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSyncNow"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginStart="10dp"
+            android:background="#1E88E5"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="立即同步"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:background="#607D8B"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="参数设置"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

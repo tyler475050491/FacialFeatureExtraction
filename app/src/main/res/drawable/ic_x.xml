@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 无网络时叠加的红色 X -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="26dp"
+    android:height="26dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:strokeColor="#F44336"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M5,5L19,19M19,5L5,19" />
+</vector>
