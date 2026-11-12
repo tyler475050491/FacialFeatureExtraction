@@ -1,0 +1,12 @@
+{
+  "source": "app/src/main/assets/models/mcv_feature_Ari.bin",
+  "size": 34307968,
+  "sha256": "cf10d9fc637da3f7bd5d98ed8482fb2038b4bdbd60787155a94a1cf1670b4f1f",
+  "part_size": 14680064,
+  "parts": [
+    "app/src/main/assets/models/mcv_feature_Ari.bin.part001",
+    "app/src/main/assets/models/mcv_feature_Ari.bin.part002",
+    "app/src/main/assets/models/mcv_feature_Ari.bin.part003"
+  ],
+  "merge": "按 parts 顺序用 copy /b（Windows）或 cat（Linux/macOS）拼接即可还原"
+}
